@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        utilRegisterDependencies()
+        serviceRegisterDependencies()
         return true
     }
 
@@ -34,3 +36,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate { //DI Regist
+    private func utilRegisterDependencies() {
+        DIContainer.shared.register(ReadPList())
+        DIContainer.shared.register(GlobalAlert())
+        let readPList: ReadPList = DIContainer.shared.resolve()
+        let globalAlert: GlobalAlert = DIContainer.shared.resolve()
+        DIContainer.shared.register(readPList)
+        DIContainer.shared.register(globalAlert)
+    }
+
+    private func serviceRegisterDependencies() {
+        DIContainer.shared.register(HeaderCommon())
+        DIContainer.shared.register(APIRequestService())
+        DIContainer.shared.register(APIUrlService())
+        DIContainer.shared.register(StoreService())
+        let headerCommon: HeaderCommon = DIContainer.shared.resolve()
+        let apiRequestService: APIRequestService = DIContainer.shared.resolve()
+        let apiUrlService: APIUrlService = DIContainer.shared.resolve()
+        let storeService: StoreService = DIContainer.shared.resolve()
+        DIContainer.shared.register(headerCommon)
+        DIContainer.shared.register(apiRequestService)
+        DIContainer.shared.register(apiUrlService)
+        DIContainer.shared.register(storeService)
+    }
+    
+}
