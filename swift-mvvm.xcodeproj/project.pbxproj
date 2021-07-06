@@ -3,19 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		595C2C72BD4CCC868D9C5748 /* Pods_swift_mvvm_swift_mvvmUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A51274D4CEDE1E7741E3591 /* Pods_swift_mvvm_swift_mvvmUITests.framework */; };
 		C5242C192692EC4800C6DA40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C182692EC4800C6DA40 /* AppDelegate.swift */; };
 		C5242C1B2692EC4800C6DA40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C1A2692EC4800C6DA40 /* SceneDelegate.swift */; };
-		C5242C1D2692EC4800C6DA40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C1C2692EC4800C6DA40 /* ViewController.swift */; };
+		C5242C1D2692EC4800C6DA40 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C1C2692EC4800C6DA40 /* RootViewController.swift */; };
 		C5242C202692EC4800C6DA40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5242C1E2692EC4800C6DA40 /* Main.storyboard */; };
 		C5242C222692EC4900C6DA40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5242C212692EC4900C6DA40 /* Assets.xcassets */; };
 		C5242C252692EC4900C6DA40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5242C232692EC4900C6DA40 /* LaunchScreen.storyboard */; };
 		C5242C302692EC4900C6DA40 /* swift_mvvmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C2F2692EC4900C6DA40 /* swift_mvvmTests.swift */; };
 		C5242C3B2692EC4900C6DA40 /* swift_mvvmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C3A2692EC4900C6DA40 /* swift_mvvmUITests.swift */; };
+		C5242C4B2692EEA100C6DA40 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C4A2692EEA100C6DA40 /* BaseView.swift */; };
+		C5242C4E2692EF4500C6DA40 /* RootViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C4D2692EF4500C6DA40 /* RootViewUI.swift */; };
+		C5242C502692F15900C6DA40 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C4F2692F15900C6DA40 /* RootViewModel.swift */; };
+		C5242C522692F34600C6DA40 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C512692F34600C6DA40 /* BaseViewController.swift */; };
+		C5242C542692F4A600C6DA40 /* StoreListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C532692F4A600C6DA40 /* StoreListViewModel.swift */; };
+		C5242C572692F4EE00C6DA40 /* GlobalAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C562692F4EE00C6DA40 /* GlobalAlert.swift */; };
+		C5242C5B2692F59000C6DA40 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C5A2692F59000C6DA40 /* BaseTableViewCell.swift */; };
+		C5242C5D2692F5C000C6DA40 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C5C2692F5C000C6DA40 /* BaseCollectionViewCell.swift */; };
+		C5242C602692F60300C6DA40 /* StoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C5F2692F60300C6DA40 /* StoreListViewController.swift */; };
+		C5242C622692F61E00C6DA40 /* StoreListViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C612692F61E00C6DA40 /* StoreListViewUI.swift */; };
+		C5242C652692F67000C6DA40 /* UILabel+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C642692F67000C6DA40 /* UILabel+extension.swift */; };
+		C5242C672692F6A300C6DA40 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C662692F6A300C6DA40 /* StoreCell.swift */; };
+		C5242C692692F75E00C6DA40 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C682692F75E00C6DA40 /* UIView+extension.swift */; };
+		C5242C6E2692FA0300C6DA40 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C6D2692FA0300C6DA40 /* DIContainer.swift */; };
+		C5242C702692FA1300C6DA40 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C6F2692FA1300C6DA40 /* Inject.swift */; };
+		C5242C722692FA3800C6DA40 /* ReadPList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C712692FA3800C6DA40 /* ReadPList.swift */; };
+		C5242C742692FA4B00C6DA40 /* ObservableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C732692FA4B00C6DA40 /* ObservableType.swift */; };
+		C5242C762692FA5D00C6DA40 /* APIRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C752692FA5D00C6DA40 /* APIRequestService.swift */; };
+		C5242C782692FA6500C6DA40 /* HeaderCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C772692FA6500C6DA40 /* HeaderCommon.swift */; };
+		C5242C7A2692FA6E00C6DA40 /* APIUrlService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C792692FA6E00C6DA40 /* APIUrlService.swift */; };
+		C5242C7C2692FAC600C6DA40 /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C7B2692FAC600C6DA40 /* StoreService.swift */; };
+		C5242C812692FAFC00C6DA40 /* APIUrl.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5242C802692FAFC00C6DA40 /* APIUrl.plist */; };
+		C5242C852692FB8100C6DA40 /* StoreRPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C842692FB8100C6DA40 /* StoreRPModel.swift */; };
+		C5242C872692FB9400C6DA40 /* StoreRPModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C862692FB9400C6DA40 /* StoreRPModelData.swift */; };
+		C5242C892692FBAD00C6DA40 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C882692FBAD00C6DA40 /* Place.swift */; };
+		C5242C8B2692FBBC00C6DA40 /* PagingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5242C8A2692FBBC00C6DA40 /* PagingInfo.swift */; };
 		EC74B5D151846A590C8EA49E /* Pods_swift_mvvmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D2DD9EE7FAB8B3F6B2C9567 /* Pods_swift_mvvmTests.framework */; };
 		F5BB49DA7AA6E3B85B1E70A5 /* Pods_swift_mvvm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DB78D9C871AB3DB1825BC9 /* Pods_swift_mvvm.framework */; };
 /* End PBXBuildFile section */
@@ -50,7 +76,7 @@
 		C5242C152692EC4800C6DA40 /* swift-mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-mvvm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5242C182692EC4800C6DA40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5242C1A2692EC4800C6DA40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C5242C1C2692EC4800C6DA40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C5242C1C2692EC4800C6DA40 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C5242C1F2692EC4800C6DA40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C5242C212692EC4900C6DA40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5242C242692EC4900C6DA40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +87,32 @@
 		C5242C362692EC4900C6DA40 /* swift-mvvmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-mvvmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5242C3A2692EC4900C6DA40 /* swift_mvvmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_mvvmUITests.swift; sourceTree = "<group>"; };
 		C5242C3C2692EC4900C6DA40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5242C4A2692EEA100C6DA40 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		C5242C4D2692EF4500C6DA40 /* RootViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewUI.swift; sourceTree = "<group>"; };
+		C5242C4F2692F15900C6DA40 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		C5242C512692F34600C6DA40 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C5242C532692F4A600C6DA40 /* StoreListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListViewModel.swift; sourceTree = "<group>"; };
+		C5242C562692F4EE00C6DA40 /* GlobalAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalAlert.swift; sourceTree = "<group>"; };
+		C5242C5A2692F59000C6DA40 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		C5242C5C2692F5C000C6DA40 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		C5242C5F2692F60300C6DA40 /* StoreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListViewController.swift; sourceTree = "<group>"; };
+		C5242C612692F61E00C6DA40 /* StoreListViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListViewUI.swift; sourceTree = "<group>"; };
+		C5242C642692F67000C6DA40 /* UILabel+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+extension.swift"; sourceTree = "<group>"; };
+		C5242C662692F6A300C6DA40 /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
+		C5242C682692F75E00C6DA40 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		C5242C6D2692FA0300C6DA40 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		C5242C6F2692FA1300C6DA40 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
+		C5242C712692FA3800C6DA40 /* ReadPList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadPList.swift; sourceTree = "<group>"; };
+		C5242C732692FA4B00C6DA40 /* ObservableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableType.swift; sourceTree = "<group>"; };
+		C5242C752692FA5D00C6DA40 /* APIRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestService.swift; sourceTree = "<group>"; };
+		C5242C772692FA6500C6DA40 /* HeaderCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCommon.swift; sourceTree = "<group>"; };
+		C5242C792692FA6E00C6DA40 /* APIUrlService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUrlService.swift; sourceTree = "<group>"; };
+		C5242C7B2692FAC600C6DA40 /* StoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreService.swift; sourceTree = "<group>"; };
+		C5242C802692FAFC00C6DA40 /* APIUrl.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIUrl.plist; sourceTree = "<group>"; };
+		C5242C842692FB8100C6DA40 /* StoreRPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRPModel.swift; sourceTree = "<group>"; };
+		C5242C862692FB9400C6DA40 /* StoreRPModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRPModelData.swift; sourceTree = "<group>"; };
+		C5242C882692FBAD00C6DA40 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		C5242C8A2692FBBC00C6DA40 /* PagingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +153,6 @@
 				644A593F394B4F1BDC2DF954 /* Pods-swift-mvvmTests.debug.xcconfig */,
 				94D77B3C5FB8F4B8BEDF1830 /* Pods-swift-mvvmTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,9 +191,19 @@
 		C5242C172692EC4800C6DA40 /* swift-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				C5242C7D2692FAE300C6DA40 /* PList */,
+				C5242C6C2692F96500C6DA40 /* DI */,
+				C5242C6B2692F95A00C6DA40 /* PropertyWrapper */,
+				C5242C6A2692F95400C6DA40 /* Service */,
+				C5242C822692FB7100C6DA40 /* Model */,
+				C5242C632692F65E00C6DA40 /* Extension */,
+				C5242C552692F4E400C6DA40 /* Util */,
+				C5242C492692EE8200C6DA40 /* Base */,
+				C5242C4C2692EF1B00C6DA40 /* ViewUI */,
+				C5242C482692EE1500C6DA40 /* ViewModel */,
+				C5242C5E2692F5EF00C6DA40 /* ViewController */,
 				C5242C182692EC4800C6DA40 /* AppDelegate.swift */,
 				C5242C1A2692EC4800C6DA40 /* SceneDelegate.swift */,
-				C5242C1C2692EC4800C6DA40 /* ViewController.swift */,
 				C5242C1E2692EC4800C6DA40 /* Main.storyboard */,
 				C5242C212692EC4900C6DA40 /* Assets.xcassets */,
 				C5242C232692EC4900C6DA40 /* LaunchScreen.storyboard */,
@@ -167,6 +228,134 @@
 				C5242C3C2692EC4900C6DA40 /* Info.plist */,
 			);
 			path = "swift-mvvmUITests";
+			sourceTree = "<group>";
+		};
+		C5242C482692EE1500C6DA40 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C5242C4F2692F15900C6DA40 /* RootViewModel.swift */,
+				C5242C532692F4A600C6DA40 /* StoreListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C5242C492692EE8200C6DA40 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C5242C4A2692EEA100C6DA40 /* BaseView.swift */,
+				C5242C512692F34600C6DA40 /* BaseViewController.swift */,
+				C5242C5A2692F59000C6DA40 /* BaseTableViewCell.swift */,
+				C5242C5C2692F5C000C6DA40 /* BaseCollectionViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C5242C4C2692EF1B00C6DA40 /* ViewUI */ = {
+			isa = PBXGroup;
+			children = (
+				C5242C592692F55E00C6DA40 /* View */,
+				C5242C582692F55B00C6DA40 /* Cell */,
+			);
+			path = ViewUI;
+			sourceTree = "<group>";
+		};
+		C5242C552692F4E400C6DA40 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C5242C562692F4EE00C6DA40 /* GlobalAlert.swift */,
+				C5242C712692FA3800C6DA40 /* ReadPList.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		C5242C582692F55B00C6DA40 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C5242C662692F6A300C6DA40 /* StoreCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C5242C592692F55E00C6DA40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C5242C4D2692EF4500C6DA40 /* RootViewUI.swift */,
+				C5242C612692F61E00C6DA40 /* StoreListViewUI.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C5242C5E2692F5EF00C6DA40 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C5242C1C2692EC4800C6DA40 /* RootViewController.swift */,
+				C5242C5F2692F60300C6DA40 /* StoreListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C5242C632692F65E00C6DA40 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C5242C642692F67000C6DA40 /* UILabel+extension.swift */,
+				C5242C682692F75E00C6DA40 /* UIView+extension.swift */,
+				C5242C732692FA4B00C6DA40 /* ObservableType.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C5242C6A2692F95400C6DA40 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C5242C752692FA5D00C6DA40 /* APIRequestService.swift */,
+				C5242C792692FA6E00C6DA40 /* APIUrlService.swift */,
+				C5242C772692FA6500C6DA40 /* HeaderCommon.swift */,
+				C5242C7B2692FAC600C6DA40 /* StoreService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C5242C6B2692F95A00C6DA40 /* PropertyWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				C5242C6F2692FA1300C6DA40 /* Inject.swift */,
+			);
+			path = PropertyWrapper;
+			sourceTree = "<group>";
+		};
+		C5242C6C2692F96500C6DA40 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				C5242C6D2692FA0300C6DA40 /* DIContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		C5242C7D2692FAE300C6DA40 /* PList */ = {
+			isa = PBXGroup;
+			children = (
+				C5242C802692FAFC00C6DA40 /* APIUrl.plist */,
+			);
+			path = PList;
+			sourceTree = "<group>";
+		};
+		C5242C822692FB7100C6DA40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C5242C832692FB7A00C6DA40 /* Store */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C5242C832692FB7A00C6DA40 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				C5242C842692FB8100C6DA40 /* StoreRPModel.swift */,
+				C5242C862692FB9400C6DA40 /* StoreRPModelData.swift */,
+				C5242C882692FBAD00C6DA40 /* Place.swift */,
+				C5242C8A2692FBBC00C6DA40 /* PagingInfo.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +469,7 @@
 				C5242C252692EC4900C6DA40 /* LaunchScreen.storyboard in Resources */,
 				C5242C222692EC4900C6DA40 /* Assets.xcassets in Resources */,
 				C5242C202692EC4800C6DA40 /* Main.storyboard in Resources */,
+				C5242C812692FAFC00C6DA40 /* APIUrl.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,9 +597,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5242C1D2692EC4800C6DA40 /* ViewController.swift in Sources */,
+				C5242C1D2692EC4800C6DA40 /* RootViewController.swift in Sources */,
+				C5242C852692FB8100C6DA40 /* StoreRPModel.swift in Sources */,
 				C5242C192692EC4800C6DA40 /* AppDelegate.swift in Sources */,
+				C5242C702692FA1300C6DA40 /* Inject.swift in Sources */,
+				C5242C692692F75E00C6DA40 /* UIView+extension.swift in Sources */,
 				C5242C1B2692EC4800C6DA40 /* SceneDelegate.swift in Sources */,
+				C5242C4B2692EEA100C6DA40 /* BaseView.swift in Sources */,
+				C5242C872692FB9400C6DA40 /* StoreRPModelData.swift in Sources */,
+				C5242C6E2692FA0300C6DA40 /* DIContainer.swift in Sources */,
+				C5242C5D2692F5C000C6DA40 /* BaseCollectionViewCell.swift in Sources */,
+				C5242C722692FA3800C6DA40 /* ReadPList.swift in Sources */,
+				C5242C502692F15900C6DA40 /* RootViewModel.swift in Sources */,
+				C5242C652692F67000C6DA40 /* UILabel+extension.swift in Sources */,
+				C5242C7C2692FAC600C6DA40 /* StoreService.swift in Sources */,
+				C5242C602692F60300C6DA40 /* StoreListViewController.swift in Sources */,
+				C5242C522692F34600C6DA40 /* BaseViewController.swift in Sources */,
+				C5242C622692F61E00C6DA40 /* StoreListViewUI.swift in Sources */,
+				C5242C762692FA5D00C6DA40 /* APIRequestService.swift in Sources */,
+				C5242C742692FA4B00C6DA40 /* ObservableType.swift in Sources */,
+				C5242C4E2692EF4500C6DA40 /* RootViewUI.swift in Sources */,
+				C5242C782692FA6500C6DA40 /* HeaderCommon.swift in Sources */,
+				C5242C8B2692FBBC00C6DA40 /* PagingInfo.swift in Sources */,
+				C5242C672692F6A300C6DA40 /* StoreCell.swift in Sources */,
+				C5242C5B2692F59000C6DA40 /* BaseTableViewCell.swift in Sources */,
+				C5242C542692F4A600C6DA40 /* StoreListViewModel.swift in Sources */,
+				C5242C892692FBAD00C6DA40 /* Place.swift in Sources */,
+				C5242C572692F4EE00C6DA40 /* GlobalAlert.swift in Sources */,
+				C5242C7A2692FA6E00C6DA40 /* APIUrlService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
