@@ -7,6 +7,7 @@
 
 import Foundation
 
+//PList 읽기위한 Util Class
 class ReadPList {
 
     func getAPIUrlPlistInfo() -> String {
@@ -19,12 +20,12 @@ class ReadPList {
                 print("개발여부:\(DEV_FLAG)")
                 
                 if DEV_FLAG {
-                    if let DEV_API_URL = config["DEV_API_URL"] as? String {
+                    if let DEV_API_URL = config["DEV_SERVER_ADDR"] as? String {
                         print("개발서버 url:\(DEV_API_URL)")
                         returnValue = DEV_API_URL
                     }
                 }else {
-                    if let PROD_API_URL = config["PROD_API_URL"] as? String {
+                    if let PROD_API_URL = config["PROD_SERVER_ADDR"] as? String {
                         print("운영서버 url:\(PROD_API_URL)")
                         returnValue = PROD_API_URL
                     }
