@@ -9,6 +9,7 @@ import Alamofire
 import RxSwift
 import RxAlamofire
 
+//공통 API호출 서비스
 class APIRequestService {
     
     @Inject var header: HeaderCommon

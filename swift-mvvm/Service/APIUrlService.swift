@@ -5,8 +5,8 @@
 //  Created by OSeung Nam on 2021/07/05.
 //
 
-import Foundation
 
+//공통 APIPath 호출 서비스
 class APIUrlService {
     
     @Inject var readPList: ReadPList
