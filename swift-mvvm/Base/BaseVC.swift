@@ -1,20 +1,25 @@
 //
-//  BaseTableViewCell.swift
+//  BaseVC.swift
 //  swift-mvvm
 //
-//  Created by OSeung Nam on 2021/07/05.
+//  Created by 남오승 on 2021/07/15.
 //
 
-import RxSwift
 import UIKit
+import RxSwift
+import RxCocoa
 
-@objc protocol BaseTableViewCellCustomizable {
+@objc protocol BaseViewControllerCustomizable {
     @objc optional func setupViews()
+    @objc optional func setupCalls()
+    @objc optional func setupBinds()
+    @objc optional func setupEvents()
 }
 
-//공통사용 하기위한 기본 TableViewCell
-class BaseTableViewCell: UITableViewCell ,BaseTableViewCellCustomizable {
+//공통사용 하기위한 기본 ViewController
+class BaseVC: UIViewController,BaseViewControllerCustomizable {
     var disposeBag = DisposeBag()
+    
     var currentViewSize = UIScreen.main.bounds
     let desighGuideDevicceWidth:CGFloat = 375  //디자인 기준 width
     let desighGuideDevicceHeight:CGFloat = 812 //디자인 기준 height
@@ -26,21 +31,36 @@ class BaseTableViewCell: UITableViewCell ,BaseTableViewCellCustomizable {
         case right
         case bottom
     }
-
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        selectionStyle = .none
-        backgroundColor = .clear
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         _setupViews()
+        _setupCalls()
+        _setupBinds()
+        _setupEvents()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+    //UI 초기 호출
     private func _setupViews() {
-        (self as BaseTableViewCellCustomizable).setupViews?()
+        view.backgroundColor = .white
+        (self as BaseViewControllerCustomizable).setupViews?()
     }
+    
+    //API등 초기 호출
+    private func _setupCalls() {
+        (self as BaseViewControllerCustomizable).setupCalls?()
+    }
+    
+    //바인딩 초기호출
+    private func _setupBinds() {
+        (self as BaseViewControllerCustomizable).setupBinds?()
+    }
+
+    //이벤트 초기 호출
+    private func _setupEvents() {
+        (self as BaseViewControllerCustomizable).setupEvents?()
+    }
+    
     
     //변경할 관계 비율
     func constraintRatio(direction:Direction,designSize:CGFloat) -> CGFloat{
@@ -76,8 +96,4 @@ class BaseTableViewCell: UITableViewCell ,BaseTableViewCellCustomizable {
         return UIColor(red: r/255, green: g/255, blue: b/255, alpha: alpha)
     }
     
-    //Veloo BrandColor 공통
-    func velooColorSetting() -> UIColor {
-        return UIColor(red: 93/255, green: 194/255, blue: 208/255, alpha: 1)
-    }
 }
